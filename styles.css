@@ -1,0 +1,175 @@
+/* aplicações  visuais comuns à topa página */
+
+body {
+    font-family: Helvetica;
+    width: 1500px;
+    height: 2015px;
+    margin: 0px;
+}
+
+/* aplicações visuais referentes à elementos do cabeçalho da página */
+
+header {
+    width: 1500px;
+    height: 319.33px;
+    color: #ffffff;
+    text-align: center;
+    border-style: solid;
+    border-width: none;
+    border-color: #707070;
+    background-color: #707070;
+}
+
+#text-1 {
+    font-size: 20px;
+    margin-top: 69px;
+    margin-bottom: 0px;
+}
+
+#text-2 {
+    font-size: 40px;
+    font-weight: bold;
+    margin-top: 0px;
+    margin-bottom: 12px;
+}
+
+#text-3 {
+    font-size: 14px;
+    margin-top: 12px;
+    margin-bottom: 25px;
+}
+
+header button {
+    background-color: #fff;
+
+    width: 160px;
+    height: 40px;
+
+    border: 1px;
+    border-color: #707070;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+
+    margin: 25px 20px;
+
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.12);
+    filter: blur(0.3px);
+    transition-duration: 0.4s;
+
+    color: #888;
+    text-align: center;
+    font-size: 16px;
+    font-weight: lighter;
+
+    cursor: pointer;
+}
+
+header button:hover {
+    background-color: #ddd;
+    color: #555;
+}
+
+/* aplicações visuais referentes à parte principal da página (navegação) */
+
+nav {
+    width: 1500px;
+    height: 1495.03px;
+    color: #888;
+    text-align: center;
+    background-color: #fff;
+}
+
+nav button {
+    background-color: #fff;
+
+    width: 260px;
+    height: 39px;
+
+    border-style: solid;
+    border-color: #707070;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+
+    margin: 42px 20px;
+
+    transition-duration: 0.4s;
+
+    color: #888;
+    text-align: center;
+    font-size: 16px;
+    font-weight: lighter;
+
+    cursor: pointer;
+}
+
+nav button:hover {
+    background-color: #ddd;
+    color: #555;
+}
+
+#special-oferts {
+    width: 931px;
+    height: 740px;
+}
+
+#text-4 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 48.67px;
+    margin-bottom: 50px;
+}
+
+#text-5 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 164px;
+    margin-bottom: 22px;
+}
+
+#text-6 {
+    font-size: 14px;
+    font-weight: lighter;
+    margin-top: 22px;
+    margin-bottom: 19.5px;
+}
+
+#text-7 {
+    font-size: 12px;
+    font-weight: lighter;
+    margin-top: 19.5px;
+    margin-bottom: 7px;
+}
+
+#text-8 {
+    font-size: 12px;
+    font-weight: lighter;
+    margin-top: 19.5px;
+    margin-bottom: 7px;
+}
+
+
+/* aplicações visuais referentes ao rodapé da página */
+
+footer {
+    width: 1500px;
+    height: 200.64px;
+    color: #ffffff;
+    text-align: center;
+    border-style: solid;
+    border-width: none;
+    border-color: #707070;
+    background-color: #707070;
+    font-size: 12px;
+    font-weight: lighter;
+}
+
+#text-9 {
+    margin: 64.64px;
+}
+
+
+
