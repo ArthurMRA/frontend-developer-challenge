@@ -109,11 +109,14 @@ nav button {
 nav button:hover {
     background-color: #ddd;
     color: #555;
+    align-content: center;
+    
 }
 
-#special-oferts {
-    width: 931px;
-    height: 740px;
+#special-offers {
+    width: 990px;
+    height: 749px;
+    margin: 0px;
 }
 
 #text-4 {
@@ -151,6 +154,17 @@ nav button:hover {
     margin-bottom: 7px;
 }
 
+#friend-name {
+    width: 340px;
+    height: 30px;
+    resize: none;
+}
+
+#friend-email {
+    width: 340px;
+    height: 30px;
+    resize: none;
+}
 
 /* aplicações visuais referentes ao rodapé da página */
 
@@ -171,5 +185,53 @@ footer {
     margin: 64.64px;
 }
 
+/* aplicações visuais referentes aos elementos em oferta */
 
+.offer {
+    width: 201px;
+    height: 350px;
+    text-align: left;
+    font-size: 12px;
+    margin: 0px 20.5px 39px 20.5px;
+    float: right;
+}
 
+.offer img {
+    width: 200px;
+    height: 150px;
+    position: center;
+    margin: 0px;
+
+}
+
+#name {
+    font-size: 14px;
+    margin: 14px 0px 0px 0px;
+
+}
+
+#description {
+    margin: 10px 0px 10px 0px;
+
+}
+
+#original-price {
+    margin: 0px 0px 6px 0px;
+
+}
+
+#offer-price {
+    font-size: 14px;
+    font-weight: bold;
+    margin: 0px 0px 0px 0px;
+}
+
+#parcelled-value {
+    margin: 7px 0px 0px 0px;
+}
+
+#buy {
+    width: 200px;
+    height: 30px;
+    margin: 10px 0px 0px 0px;
+}
