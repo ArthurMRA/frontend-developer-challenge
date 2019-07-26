@@ -1,0 +1,24 @@
+{
+  "name": "frontend-developer-challenge",
+  "version": "1.0.0",
+  "description": "> **ATENÇÃO:** Antes de começar, se [cadastre na vaga](https://linxneemuchaordic.recruiterbox.com/) via Recruiterbox **=]**",
+  "main": "functions.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ArthurMRA/frontend-developer-challenge.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ArthurMRA/frontend-developer-challenge/issues"
+  },
+  "homepage": "https://github.com/ArthurMRA/frontend-developer-challenge#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "nodemon": "1.19.1"
+  }
+}
