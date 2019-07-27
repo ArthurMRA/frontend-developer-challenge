@@ -1,10 +1,11 @@
 /* aplicações  visuais comuns à topa página */
-
+html {
+    height: 100%;
+}
 body {
     font-family: Helvetica;
-    width: 1500px;
-    height: 2015px;
-    margin: 0px;
+    box-align: center;
+    margin: 1.5px 1.5px 1.5px 1.5px;
 }
 
 /* aplicações visuais referentes à elementos do cabeçalho da página */
@@ -78,6 +79,8 @@ nav {
     height: 1495.03px;
     color: #888;
     text-align: center;
+    display: flex;
+    flex-direction: column;
     background-color: #fff;
 }
 
@@ -100,6 +103,7 @@ nav button {
 
     color: #888;
     text-align: center;
+    align-self: center;
     font-size: 16px;
     font-weight: lighter;
 
@@ -113,57 +117,87 @@ nav button:hover {
     
 }
 
-#special-offers {
-    width: 990px;
-    height: 749px;
-    margin: 0px;
-}
-
 #text-4 {
     font-size: 18px;
     font-weight: bold;
-    margin-top: 48.67px;
-    margin-bottom: 50px;
+    margin: 48.67px 0px 0px 0px;
+}
+
+#special-offers {
+    width: 990px;
+    height: 749px;
+    margin: 50px 0px 0px 0px;
+    align-self: center;
+    overflow-y: scroll;
+    scrollbar-width: none;
 }
 
 #text-5 {
     font-size: 18px;
     font-weight: bold;
-    margin-top: 164px;
-    margin-bottom: 22px;
+    margin: 164px 0px 0px 0px;
+
 }
 
 #text-6 {
     font-size: 14px;
     font-weight: lighter;
-    margin-top: 22px;
-    margin-bottom: 19.5px;
+    margin: 44px 0px 0px 0px;
+}
+
+.friend-data {
+    display: flex;
+    width: 720px;
+    align-self: center;
+    margin: 30px 0px 0px 0px;
+}
+
+#data-1 {
+    align-content: left;
+    width: 340px;
+    height: 51px;    
+    margin:  0px 20px 0px 0px;
+    float: left;
 }
 
 #text-7 {
     font-size: 12px;
     font-weight: lighter;
-    margin-top: 19.5px;
-    margin-bottom: 7px;
+    margin: 0px;
+    text-align: left;
+}
+
+#friend-name {
+    width: 335px;
+    height: 25px;
+    resize: none;
+    margin: 7px 0px 0px 0px;
+}
+
+#data-2 {
+    align-content: left;
+    width: 340px;
+    height: 51px;    
+    margin:  0px 0px 0px 20px;
+    float: left;
 }
 
 #text-8 {
     font-size: 12px;
     font-weight: lighter;
-    margin-top: 19.5px;
-    margin-bottom: 7px;
-}
-
-#friend-name {
-    width: 340px;
-    height: 30px;
-    resize: none;
+    margin: 0px;
+    text-align: left;
 }
 
 #friend-email {
-    width: 340px;
-    height: 30px;
+    width: 335px;
+    height: 25px;
     resize: none;
+    margin: 7px 0px 0px 0px;
+}
+
+#send-button {
+    margin: 50px 0px 0px 0px;
 }
 
 /* aplicações visuais referentes ao rodapé da página */
@@ -193,7 +227,7 @@ footer {
     text-align: left;
     font-size: 12px;
     margin: 0px 20.5px 39px 20.5px;
-    float: right;
+    float: left;
 }
 
 .offer img {
@@ -201,7 +235,6 @@ footer {
     height: 150px;
     position: center;
     margin: 0px;
-
 }
 
 #name {
@@ -215,18 +248,18 @@ footer {
 
 }
 
-#original-price {
+#old-price {
     margin: 0px 0px 6px 0px;
 
 }
 
-#offer-price {
+#price {
     font-size: 14px;
     font-weight: bold;
     margin: 0px 0px 0px 0px;
 }
 
-#parcelled-value {
+#installment-value {
     margin: 7px 0px 0px 0px;
 }
 
