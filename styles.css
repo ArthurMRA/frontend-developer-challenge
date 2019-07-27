@@ -171,6 +171,8 @@ nav button:hover {
     width: 335px;
     height: 25px;
     resize: none;
+    font-family: Helvetica;
+
     margin: 7px 0px 0px 0px;
 }
 
@@ -193,6 +195,7 @@ nav button:hover {
     width: 335px;
     height: 25px;
     resize: none;
+    font-family: Helvetica;
     margin: 7px 0px 0px 0px;
 }
 
