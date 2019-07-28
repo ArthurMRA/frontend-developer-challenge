@@ -1,9 +1,10 @@
-const nextOffers = {
-    url: '',
-    getURL: () => this.url,
-    setURL: function(responseURL) {this.url = responseURL}
+/* objeto resposavel por guardar o numero da pagina atual */
+const actualPage = {
+    number: 1
 }
 
+
+/* metodo responsavel por modificar a pagina, adicionando uma oferta ao campo de ofertas especiais(identificado com a tag "special-offers") */
 const updateScreen = (offer) => {
     const specialOffers = document.querySelector('#special-offers')
 
@@ -45,7 +46,8 @@ const updateScreen = (offer) => {
     specialOffers.appendChild(div)     
 }
 
-const updateOffers = (URL, nextOffers) => {
+/* metodo responsavel por realizar uma requisicao do tipo get e conseguir os dados dos produtos a serem mostrados */
+const updateOffers = (URL) => {
     const xhr = new XMLHttpRequest()
     xhr.open('GET', URL, true)
 
@@ -53,7 +55,7 @@ const updateOffers = (URL, nextOffers) => {
         if (xhr.status >= 200 && xhr.status < 300) {
             const response = JSON.parse(xhr.response)
             response.products.forEach(e => updateScreen(e))
-            nextOffers.setURL(response.nextPage)
+            actualPage.number++
         } else if (xhr >= 400) {
             console.log(xhr.status, xhr.statusText)
         }
@@ -62,7 +64,35 @@ const updateOffers = (URL, nextOffers) => {
     xhr.send()
 }
 
-document.querySelector('#more-offers').addEventListener("click", updateOffers(`https://${nextOffers.getURL()}`, nextOffers))
+/* metodos resposaveis por validar os campos de email e nome do amigo(a) a ser indicado */
+const validateEmail = (email) => {
+    /* 
+    o regex abaixo foi obtido do seguinte topico do stack overflow: https://stackoverflow.com/questions/46155/how-to-validate-an-email-address-in-javascript .
+    ele nao pode ser considerado o "mais correto", mas valida de forma correta em bastante casos.
+    */
+    let re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+    return re.test(String(email).toLowerCase())
+}
 
-updateOffers('https://frontend-intern-challenge-api.iurykrieger.now.sh/products?page=1', nextOffers)
+
+const validadeName = (name) => {
+    let re = /^[a-zA-Z\s]*$/
+    /* apenas nomes que contenham espacos e letras maiusculas ou minusculas, alem de nao serem vazios, sao considerados validos */
+    return re.test(String(name))
+}
+
+
+/* chamada do metodo updateOffers para atualizar o campo special-offers com as 8 primeiras ofertas */
+updateOffers(`https://frontend-intern-challenge-api.iurykrieger.now.sh/products?page=${actualPage.number}`)
+
+/* adicionando EventListeners aos botoes responsáveis por atualizar a selecao de produtos e enviar um email para um amigo */
+document.querySelector('#more-offers').addEventListener('click',  function(){ updateOffers(`https://frontend-intern-challenge-api.iurykrieger.now.sh/products?page=${actualPage.number}`); })
+document.querySelector('#send-button').addEventListener('click', () => {
+            if (!validateEmail(document.querySelector('#friend-email').value) || !validadeName(document.querySelector('#friend-name').value)) {
+                alert('Email ou nome inválido. Por favor, revise-os e tente novamente')
+            } else {
+                alert('Seu amigo ficará muito feliz com as ofertas ;)')
+            } 
+    })
+
 

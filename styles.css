@@ -1,4 +1,4 @@
-/* aplicações  visuais comuns à topa página */
+/* aplicacoes  visuais comuns a toda pagina */
 html {
     height: 100%;
 }
@@ -8,7 +8,7 @@ body {
     margin: 1.5px 1.5px 1.5px 1.5px;
 }
 
-/* aplicações visuais referentes à elementos do cabeçalho da página */
+/* aplicacoes visuais referentes à elementos do cabecalho da página */
 
 header {
     width: 1500px;
@@ -72,7 +72,7 @@ header button:hover {
     color: #555;
 }
 
-/* aplicações visuais referentes à parte principal da página (navegação) */
+/* aplicacoes visuais referentes a parte principal da pagina (navegacao) */
 
 nav {
     width: 1500px;
@@ -129,7 +129,7 @@ nav button:hover {
     margin: 50px 0px 0px 0px;
     align-self: center;
     overflow-y: scroll;
-    scrollbar-width: none;
+    scrollbar-width: thin;
 }
 
 #text-5 {
@@ -203,7 +203,7 @@ nav button:hover {
     margin: 50px 0px 0px 0px;
 }
 
-/* aplicações visuais referentes ao rodapé da página */
+/* aplicacoes visuais referentes ao rodape da pagina */
 
 footer {
     width: 1500px;
@@ -222,7 +222,7 @@ footer {
     margin: 64.64px;
 }
 
-/* aplicações visuais referentes aos elementos em oferta */
+/* aplicacoes visuais referentes aos elementos em oferta */
 
 .offer {
     width: 201px;
