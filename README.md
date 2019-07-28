@@ -48,4 +48,6 @@ Imaginei que, de acordo com a vaga para a qual estou me candidatando, a minha pr
 
 - As fontes pareceram mais escuras na minha página :(, mesmo usando as mesmas cores propostas no modelo;
 
+- A fonte usada no modelo foi a Helvetica Neue; descobri que ela é nativa apenas em dispositivos mac, e eu tenho apenas windows e linux. Sendo assim, fui no google fonts para poder colocá-la no meu projeto, porém descobri que ela é paga (https://www.fonts.com/font/linotype/neue-helvetica?QueryFontType=Web&src=GoogleWebFonts). Sendo assim, decidi usar apenas a fonte Helvetica; espero que entendam. 
+
 **Espero que gostem ;)**
