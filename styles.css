@@ -129,7 +129,8 @@ nav button:hover {
     margin: 50px 0px 0px 0px;
     align-self: center;
     overflow-y: scroll;
-    scrollbar-width: thin;
+    scrollbar-width: none;
+    /* afim de ficar semelhante ao modelo passado optei por ocultar a barra de rolagem */
 }
 
 #text-5 {
@@ -243,17 +244,14 @@ footer {
 #name {
     font-size: 14px;
     margin: 14px 0px 0px 0px;
-
 }
 
 #description {
     margin: 10px 0px 10px 0px;
-
 }
 
 #old-price {
     margin: 0px 0px 6px 0px;
-
 }
 
 #price {
