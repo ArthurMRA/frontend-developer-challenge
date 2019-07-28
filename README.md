@@ -1,72 +1,51 @@
-# Desafio | Frontend Developer
+# Desafio Frontend Developer - Arthur Moreira Rodrigues Alves
 
-> **ATENÇÃO:** Antes de começar, se [cadastre na vaga](https://linxneemuchaordic.recruiterbox.com/) via Recruiterbox **=]**
+**Live preview da minha página:** https://desafiolinximpulse-arthurmoreira.netlify.com/
 
-Olá! Seja bem vindo ao teste para a vaga de **Frontend Developer** para o time de **Customer Operations** da Linx Impulse.
-
-Preparamos um teste que abordará seus conhecimentos em **HTML**, **CSS** e **Javascript**. Você será encaixado na vaga de acordo com seu resultado.
+Aqui irei explicar meus passos para execução do desafio. Para testar a página basta usar o link acima. Caso queiram ver o código basta abri-lo em um editor de texto qualquer. Usei o VisualCode.
 
 ---
 
-## Sobre o desafio
+## A estrutura do projeto:
 
-O desafio consiste no *layout* de uma *landing page* com uma grade de produtos e um formulário de *newsletter*. Seu principal objetivo é transformar este *layout* em uma página funcional.
+- O projeto está estruturado em 3 arquivos: index.html(inicialmente  se chamava structure.html), styles.css e functions.js
 
-**Link do layout**: https://xd.adobe.com/spec/aa1c5781-ecac-46c9-7032-b66139998404-dc2d/
+## Prioridade adotada:
 
-**Endpoint da API**: https://frontend-intern-challenge-api.iurykrieger.now.sh/products?page=1
+Imaginei que, de acordo com a vaga para a qual estou me candidatando, a minha principal função seria estruturar a parte visual da página. Sendo assim, inicialmente foquei em definir a estrutura da página. Após isso meu foco foi trabalhar na parte visual para garantir a consistência com o modelo proposto no desafio. Por último eu trabalhei na lógica necessária para a funcionalidade da página.
 
-### Layout
+## Dentro da etapa de estruturação da página:
 
-Você terá que implementar o *layout* de acordo com esse **[mock](https://xd.adobe.com/spec/aa1c5781-ecac-46c9-7032-b66139998404-dc2d/)**. O *mock* contém a estrutura do layout e todo o estilo da página.
+- Criei um arquivo nomeado como structure.html (nome bastante sugestivo, hehehe). Ultilizando tags comuns do HTML5 estruturei a página, dividindo-a em 3 partes principais: cabeçalho, navegação e rodapé.
 
-É importante se ater aos detalhes de tamanho e espaçamento entre os elementos da página, construindo o HTML mais semântico possível utilizando-se das tags do HTML5.
+- Durante o projeto eu também inseri elementos, que representavam as ofertas e seus dados, dentro da parte de navegação, afim de definir estratégias para garantir o funcionamento da página, de forma que ficasse consistente com o modelo do desafio.
 
-### Comportamento:
+- Em alguns momentos eu escrevi o código referente ao estilo e funcionamento da página diretamente no arquivos index.html; Fiz isso apenas pois minha tela é pequena, e quiz evitar ter que trocar de aba muitas vezes, e eventualmente me confundir; apesar disso, os códigos referentes a esses dois tópicos estão separados em seus respectivos arquivos .css e .js.
 
-Para preencher a página com as informações dos produtos, você terá que consultar esta **[API](https://frontend-intern-challenge-api.iurykrieger.now.sh/products?page=1)** de forma paginada, sendo que cada página consultada retornará as informações de **8 produtos** e um **link para a próxima página**.
+- A estrutura inicial não foi a final. Eu a alterei no decorrer do desafio.
 
-Assim que obter os dados, você deverá implementar os seguintes pontos:
+# Dentro da etapa de aplicação da parte visual:
 
-- Para cada **produto** retornado pela API, um **card de produto** com as respectivas informações deve ser criado na grade de produtos;
-- Ao clicar no botão **Ainda mais produtos aqui!** a próxima página da API deve ser consultada, gerando mais **8 produtos** na grade existente, abaixo dos produtos já carregados pela primeira requisição;
-- O formulário de *newsletter* com o título **Compartilhe a novidade** deve ter seus campos de *input* validados de acordo com o conteúdo (ex: O campo de email deve conter um email válido);
+- Após ter a estrutura inicial feita, eu começei a aplicar o estilo às partes mais simples da página, que na minha opinião eram o cabeçalho e rodapé. Adotei essa estratégia pois dentro da proposta do desafio essas duas áreas não necessitavam ter nenhuma função que se disparasse com a interação do usuário, nem se alterar dinamicamente.
 
----
+- Depois de ter trabalhado no estilo inicial do cabeçalho e rodapé, parti para a área de navegação. Primeiro apliquei o estilo referente aos elementos mais simples dessa área, como os botões, áreas de inserção de texto e rótulos. 
 
-## Instruções
+- Por último trabalhei na parte visual que dizia respeito à área onde as ofertas seriam dispostas e as ofertas em si. Inseri esses elementos diretamente na estrutura do index.html, para poder garantir que o seu posicionamento fosse o mais próximo de como seria no projeto final. Depois que consegui um resultado satisfatório, os exclui do arquivo da estrutura. Minha intenção era gerá-los através de uma função escrita em Javascript.
 
-- Faça um **[fork](https://help.github.com/en/articles/fork-a-repo)** deste repositório e crie uma branch com o seu nome (ex: `nome-sobrenome`) que irá conter o código do seu desafio;
-- Faça *commits* ao longo do seu desenvolvimento, isso nos ajudará a entender sua linha de raciocínio ;)
-- Substitua este **README.md** por outro que contenha as informações de *setup* e a descrição do seu projeto;
-- Suba um *live preview* do seu desafio em um dos provedores a seguir, isso nos ajudará a testar sua implementação:
-    - **[Now](https://zeit.co/now)**
-    - **[Heroku](https://www.heroku.com)**
-    - **[Netifly](https://www.netlify.com/)**
-    - Qualquer outro semelhante
-- Assim que concluir o seu desafio, abra um **[pull request](https://help.github.com/en/articles/creating-a-pull-request-from-a-fork)** para o [repositório do desafio](https://github.com/iurykrieger/frontend-developer-challenge) com suas alterações e com o link do *live preview* na descrição;
+## Dentro da etapa de construção das funções necessária:
 
----
+- Depois de possuir um estrutura e estilos quase finalizados, eu começei a definir as funções necessárias para adicionar os elementos das ofertas na página; nesse momento eu ainda não estava me preocupando em pegar as ofertas do JSON passado no desafio.
 
-## Dicas
+- Depois de alterar algumas configurações no estilo das ofertas e da área onde seriam dispostas, e garantir que o método estava inserindo as ofertas da forma desejada, começei a trabalhar para pegar as ofertas do arquivo.JSON disponibilizado. Inicialmente eu usei o módulo axios para obter o .JSON, porém eu começei a me embananar e decidir usar o Xmlhttprequest. Nos primeiros momentos eu estava tentando armazenar a URL que vinha no JSON para poder usar no momento de mostrar mais ofertas, porém não estava dando certo; então, depois de uma análise nos arquivos .JSON do desafio eu percebi que todas as URL eram iguais, se distiguindo apenas pelo número da página no final, sendo assim eu criei um objeto que guardava o número da página, que seria incrementada toda vez que o método de atualizar as ofertas fosse chamado.
 
-> Crie uma estrutura de arquivos organizada para suas implementações
+- Por último, através do uso de regex eu implementei a validação de email e nome. Optei pelo regex por parecer mais compacto. O regex usado na validação de email foi tirado de um tópico do stackoverflow que procurei, pois percebi que haviam vários tipos de email válidos, e infelizmente meus conhecimentos de regex no momento não são tão avançados. Ele não é o melhor, mas achei que para o contexto do desafio ele seria bom. O regex usado na validação de nome é simples, e foi feito por mim, porém achei válido ultilizá-lo para dar um charme maior.
 
-> Construa o CSS de forma bem estruturada e em um arquivo separado.
+## Finalizando:
 
-> Evite poluir o escopo global do Javascript
+- Tive problemas em conseguir centralizar a página toda, usando as proporções que foram passadas;
 
-> Documente suas funções e seja o mais conciso possível ao escrever seu código
+- Optei por deixar a barra de rolagem das ofertas escondida para ter uma fidelidade maior com o modelo proposto;
 
-> Seu README.md deve conter as instruções necessárias para qualquer pessoa fazer seu projeto funcionar
+- As fontes pareceram mais escuras na minha página :(, mesmo usando as mesmas cores propostas no modelo;
 
-> Your code will be better understood in English ;)
-
-## Não conseguiu fazer tudo?
-A sua forma de priorizar a entrega também vai ser considerada. Escreva no README.md o que você conseguiu e não conseguiu implementar, descrevendo porque você preferiu priorizar desta maneira.
-
----
-
-Em caso de dúvidas, [abra uma issue](https://github.com/chaordic/frontend-intern-challenge/issues).
-
-**Boa sorte =]**
+**Espero que gostem ;)**
